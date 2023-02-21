@@ -1,0 +1,28 @@
+
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+      if(n==0)
+      return false;
+      while(n%2==0)
+          n=n/2;
+          return n==1;
+
+    }
+};
+
+OR
+
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+
+        if(n <= 0)
+            return false;
+
+        int bits = __builtin_popcount(n);
+
+        return bits == 1;
+    
+    }
+};
